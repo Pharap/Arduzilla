@@ -76,13 +76,13 @@ void drawDinoAttack() {
 }
 
 void drawDinoDebug() {
-  arduboy.println("dino x, dino y: ");
+  arduboy.println(F("dino x, dino y: "));
   arduboy.println((int)dino_x);
   arduboy.println((int)dino_y);
-  arduboy.print("dino_dir: ");
+  arduboy.print(F("dino_dir: "));
   arduboy.print(dino_dir);
   arduboy.println();
-  arduboy.print("dino_walk_frame: ");
+  arduboy.print(F("dino_walk_frame: "));
   arduboy.print(dino_walk_frame);
 }
 

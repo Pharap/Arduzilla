@@ -1,4 +1,4 @@
 
 void egg() {
-  arduboy.println("egg");
+  arduboy.println(F("egg"));
 }
