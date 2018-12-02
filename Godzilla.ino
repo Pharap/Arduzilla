@@ -56,8 +56,8 @@ float maxf(float a, float b) {
   return (a > b) ? a : b;
 }
 
-float lerp(float s, float e, float p) {
-  return (s + p*(e - s));
+float lerp(float value0, float value1, float factor) {
+  return (((1 - factor) * value0) + (factor * value1));
 }
 
 // CAMERA FUNCTIONS //
