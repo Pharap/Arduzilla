@@ -14,9 +14,9 @@ bool dirPressed() {
   return false;
 }
 
-void limitXAtWorldBounds(float *x, float *dx, int w) {
-  float new_x       = *x;
-  float new_dx      = *dx;
+void limitXAtWorldBounds(float & x, float & dx, int w) {
+  float new_x       = x;
+  float new_dx      = dx;
   float world_right = WORLD_WIDTH*TILE_SIZE;
   
   if (new_x <= 0) {
@@ -27,13 +27,13 @@ void limitXAtWorldBounds(float *x, float *dx, int w) {
     new_dx = 0;
   }
 
-  *x  = new_x;
-  *dx = new_dx;
+  x  = new_x;
+  dx = new_dx;
 }
 
-void limitYAtWorldBounds(float *y, float *dy, int h) {
-  float new_y       = *y;
-  float new_dy      = *dy;
+void limitYAtWorldBounds(float & y, float & dy, int h) {
+  float new_y       = y;
+  float new_dy      = dy;
   float world_bottom = WORLD_HEIGHT*TILE_SIZE;
   
   if (new_y <= 0) {
@@ -44,8 +44,8 @@ void limitYAtWorldBounds(float *y, float *dy, int h) {
     new_dy = 0;
   }
 
-  *y  = new_y;
-  *dy = new_dy;
+  y  = new_y;
+  dy = new_dy;
 }
 
 float minf(float a, float b) {

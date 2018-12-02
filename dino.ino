@@ -57,8 +57,8 @@ void updateDino() {
   dinoCheckAttack();
   if (!dino_attacking) {
     dinoMove();
-    limitXAtWorldBounds(&dino_x, &dino_dx, 26);
-    limitYAtWorldBounds(&dino_y, &dino_dy, 16);
+    limitXAtWorldBounds(dino_x, dino_dx, 26);
+    limitYAtWorldBounds(dino_y, dino_dy, 16);
   } else {
     dinoAttack();
   }
