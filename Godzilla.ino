@@ -49,11 +49,11 @@ void limitYAtWorldBounds(float *y, float *dy, int h) {
 }
 
 float minf(float a, float b) {
-  if(a < b) {return a;} else {return b;}
+  return (a < b) ? a : b;
 }
 
 float maxf(float a, float b) {
-  if(a > b) {return a;} else {return b;}
+  return (a > b) ? a : b;
 }
 
 float lerp(float s, float e, float p) {
