@@ -105,9 +105,9 @@ void cameraFollow(float tx, float ty) {
 
 void limitCamera() {
   cam_x = minf(cam_x, 0);
-  cam_x = maxf(cam_x, -(WORLD_WIDTH*TILE_SIZE)+128);
+  cam_x = maxf(cam_x, -(WORLD_WIDTH*TILE_SIZE)+WIDTH);
   cam_y = minf(cam_y, 0);
-  cam_y = maxf(cam_y, -(WORLD_HEIGHT*TILE_SIZE)+64);
+  cam_y = maxf(cam_y, -(WORLD_HEIGHT*TILE_SIZE)+HEIGHT);
 }
 
 //// DINOSAUR FUNCTIONS //
@@ -238,7 +238,8 @@ void setup() {
 
 void loop() {
   // Update
-  if(!arduboy.nextFrame()) return;
+  if(!arduboy.nextFrame())
+    return;
 
   //moveCamera();
   getCameraOffset();
@@ -254,6 +255,6 @@ void loop() {
   drawBuildings();
   drawDino();
 
-  Serial.write(arduboy.getBuffer(), 128 * 64 / 8);
+  Serial.write(arduboy.getBuffer(), WIDTH * HEIGHT / 8);
   arduboy.display();
 }
