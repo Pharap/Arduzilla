@@ -249,10 +249,10 @@ void loop() {
 
   // Draw
   arduboy.clear();
-    arduboy.fillScreen();
-    drawWorldMap();
-    drawBuildings();
-    drawDino();
+  arduboy.fillScreen();
+  drawWorldMap();
+  drawBuildings();
+  drawDino();
 
   Serial.write(arduboy.getBuffer(), 128 * 64 / 8);
   arduboy.display();
